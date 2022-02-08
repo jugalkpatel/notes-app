@@ -1,3 +1,7 @@
+import { useRouter } from "next/router";
+
 export default () => {
-    return <h1>id param route</h1>
-}
+  const router = useRouter();
+  const { id } = router.query;
+  return <h1>{id} param route</h1>;
+};
