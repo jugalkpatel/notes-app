@@ -3,5 +3,10 @@ import { useRouter } from "next/router";
 export default () => {
   const router = useRouter();
   const { id } = router.query;
-  return <h1>{id} note</h1>;
+  return (
+    <>
+      {id} note
+      <button onClick={() => router.push("/notes")}> to note list</button>
+    </>
+  );
 };
